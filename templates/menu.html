@@ -1,0 +1,17 @@
+<div class="container clearfix">
+    <h1>Собираю Меню сайта</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Shortcodes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Page Titles</li>
+    </ol>
+</div>
+
+
+
+
+<ul class="menu">
+{% for m_item in single_menu %}
+    <li><a href="/{{ m_item.slug }}">{{ m_item.name }}</a></li>
+{% endfor %}
+</ul>

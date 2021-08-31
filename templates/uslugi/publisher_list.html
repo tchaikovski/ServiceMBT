@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+    List title
+{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block breadcrumps %}
+    <section id="page-title" class="page-title-right">
+        <div class="container clearfix">
+            <h1>List H1</h1>
+            <span>{% autoescape off %}{% endautoescape %}</span>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">huuh.ru</a></li>
+                <li class="breadcrumb-item"><a href="/blog/">Блог</a></li>
+                <li class="breadcrumb-item active" aria-current="page"></li>
+            </ol>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block content %}
+
+    pub list
+    <ul>
+        {% for cat in object_list %}
+            <a href="{{ cat.slug }}">
+            {{ cat.name }}
+
+            </a>
+    {% endfor %}
+    </ul>
+
+
+
+{% endblock %}

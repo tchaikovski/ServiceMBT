@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% block title %}
+    Detail title
+{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block breadcrumps %}
+    <section id="page-title" class="page-title-right">
+
+
+        <div class="container clearfix">
+            <h1>{{ post.name }} </h1>
+            <span>{% autoescape off %}{% endautoescape %}</span>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">huuh.ru</a></li>
+                <li class="breadcrumb-item"><a href="/service/">Блог</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ post.name }}</li>
+            </ol>
+        </div>
+
+    </section>
+{% endblock %}
+
+{% block content %}
+    <style>
+
+        .entry-image, .entry-image > a, .entry-image .slide a, .entry-image img {
+            display: block;
+            position: relative;
+            width: 200px;
+            height: auto;
+        }
+    </style>
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+                <div class="fancy-title title-border-color title-left"><h2>{{ post.name }}</h2></div>
+
+                <div class="entry-image alignleft">
+                    <a href="#"><img class="alignleft" src="{{ post.photo.url }}" alt="Blog Single"></a>
+                </div>
+
+                {% autoescape off %}{{ post.tables.content }}{% endautoescape %}
+
+
+                <div class="fancy-title title-border-color title-left"><h2>Цены</h2></div>
+                {% autoescape off %}
+
+                    {{ post.tables.price }}
+
+                {% endautoescape %}
+
+                <div class="divider"><i class="icon-circle"></i></div>
+                {% autoescape off %}{{ post.tables.block_price }}{% endautoescape %}
+                <div class="divider"><i class="icon-circle"></i></div>
+                <div class="fancy-title title-border-color title-left"><h3>Стоимость работ</h3></div>
+                {% autoescape off %}{{ post.tables.tab_price }}{% endautoescape %}
+                <div class="fancy-title title-border-color title-left"><h2>Наши преимущества</h2></div>
+                <div class="promo promo-light p-4 p-md-5 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg">
+                            {% autoescape off %}{{ post.tables.block_one }}{% endautoescape %}
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="fancy-title title-border-color title-left"><h2>Основные неисправности</h2></div>
+
+                {% autoescape off %}{{ post.tables.block_two }}{% endautoescape %}
+                {#{% include 'kill.html' %}#}
+
+
+                <div id="comments" class="clearfix">
+                    {% if post.comments.all != 0 %}
+
+
+                        <h3 id="comments-title"><span>{{ post.comments.count }}</span> Вопрос(а)</h3>
+                    {% endif %}
+                    <!-- Comments List
+                    ============================================= -->
+                    <ol class="commentlist clearfix">
+                        {% for comment in post.comments.all %}
+                            <li class="comment even thread-even">
+
+                                <div id="comment-1" class="comment-wrap clearfix">
+
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+
+														<span class="comment-avatar clearfix">
+														<img alt="Image" src="/static/images/ava.png" class="avatar avatar-60 photo avatar-default"></span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="comment-content clearfix">
+
+                                        <div class="comment-author">{{ comment.name }}<span>
+                                                    <a href="#" title="Permalink to this comment"> {{ comment.created }}</a>
+                                                </span></div>
+
+                                        {{ comment.body|linebreaks }}
+
+                                        <a class="comment-reply-link" href="#"><i class="icon-reply"></i></a>
+
+                                    </div>
+
+                                    <div class="clear"></div>
+
+                                </div>
+
+                                {% if comment.answer %}
+                                    <ul class="children">
+
+                                        <li class="comment byuser comment-author-_smcl_admin odd alt depth-2" id="li-comment-3">
+
+                                            <div id="comment-3" class="comment-wrap clearfix">
+
+                                                <div class="comment-meta">
+
+                                                    <div class="comment-author vcard">
+
+																<span class="comment-avatar clearfix">
+																<img alt="Image"
+                                                                     src="https://1.gravatar.com/avatar/30110f1f3a4238c619bcceb10f4c4484?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G"
+                                                                     class="avatar avatar-40 photo" height="40" width="40"></span>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="comment-content clearfix">
+
+                                                    <div class="comment-author">Администратор сайта<span>{{ comment.updated }}</span>
+                                                    </div>
+                                                    {{ comment.answer|linebreaks }}
+
+                                                    <a class="comment-reply-link" href="#"><i class="icon-reply"></i></a>
+
+                                                </div>
+
+                                                <div class="clear"></div>
+
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                {% endif %}
+
+                            </li>
+
+
+
+
+                        {% empty %}
+                            <h3>Пока по ремонту <span>с этой страницы</span> вопросы не задавали.</h3>
+                        {% endfor %}
+
+
+                    </ol><!-- .commentlist end -->
+
+                    <div class="clear"></div>
+  <!-- reCAPTCHA API -->
+
+                    <!-- Comment Form
+                    ============================================= -->
+                    <div id="respond">
+
+                        {% if new_comment %}
+                            <h2>Ваш <span>вопрос отправлен.</span></h2>
+
+
+                        {% else %}
+                            <h2>Задать <span>вопрос</span></h2>
+                            <form class="row" action="." method="post" id="commentform">
+
+
+                                <div class="col-md-6 form-group">
+                                    <label for="author">Имя</label>
+                                    {{ comment_form.name }}
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label for="email">Email</label>
+                                    {{ comment_form.email }}
+                                </div>
+                                <div class="col-12 form-group">
+                                    <label for="comment">Вопрос</label>
+                                    {{ comment_form.body }}
+                                </div>
+
+                                {% csrf_token %}
+<script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6LcZLi4cAAAAANAu7ggsuaPMvHgBNQRamBC-ICZQ"></div>
+                                <div class="col-12 form-group">
+                                    <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d m-0">Задать вопрос</button>
+                                </div>
+
+
+                            </form>
+
+                        {% endif %}
+
+
+                    </div><!-- #respond end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}
+

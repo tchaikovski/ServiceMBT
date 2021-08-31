@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load common_tags %}
+{% load static %}
+
+{% block title %}
+    {{ singlepage.name }}
+{% endblock %}
+{% block breadcrumps %}
+    <section id="page-title" class="page-title-right">
+
+                <div class="container clearfix">
+                    <h1>{{ singlepage.name }}</h1>
+                     {% autoescape off %}
+                         <span>{{ singlepage.content|truncatewords:6 }}</span>
+                     {% endautoescape %}
+
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">huuh.ru</a></li>
+{#                        <li class="breadcrumb-item"><a href="#">Shortcodes</a></li>#}
+                        <li class="breadcrumb-item active" aria-current="page">{{ singlepage.name }}</li>
+                    </ol>
+                </div>
+
+            </section>
+{% endblock %}
+
+{% block content %}
+{#{% include 'SinglePages/singlemenu.html' %}#}
+
+{% show_top_menu %}
+
+
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+<div class="fancy-title title-double-border">
+						<h1>Double Border Title</h1>
+					</div>
+
+{##}
+{#            {{ page_obj }}#}
+{#            {% for list in singlelist %}#}
+{#                {{ list.name }}#}
+{#            {% endfor %}#}
+
+
+
+
+
+                        {{ singlepage.content|safe }}
+                           {% autoescape off %}
+                        {{ singlepage.body }}
+                    {% endautoescape %}
+            <div class="row col-mb-50">
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

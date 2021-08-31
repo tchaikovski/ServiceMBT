@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>На конкуренте 404</h1>
+    {% for cat in posts %}
+<h2> Категория {{ cat.cat.name }} </h2>
+
+    {% endfor %}
+
+    {% for post in posts %}
+<h3> Публикация {{ post.name }}</h3>
+
+    {% endfor %}
+
+
+{% endblock %}
