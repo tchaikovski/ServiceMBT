@@ -5,7 +5,7 @@
       <webServer id="08b364e7-ce80-47cd-949e-67dce98cde39" name="huuh" url="https://huuh.ru">
         <fileTransfer rootFolder="/home/t/tchaikp7/huuh.ru/public_html" accessType="SFTP" host="tchaikp7.beget.tech" port="22" sshConfigId="19779a9a-021d-47bc-a1b0-c576dbe12149" sshConfig="tchaikp7_huuh@tchaikp7.beget.tech:22 password">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" muteSftpMessages="true" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
