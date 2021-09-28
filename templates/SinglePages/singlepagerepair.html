@@ -1,0 +1,1695 @@
+{% extends 'base.html' %}
+{% load common_tags %}
+{% load static %}
+
+{% block title %}11
+    {{ post.meta_title }}
+{% endblock %}
+{% block description %}{{ post.meta_description }}{% endblock %}
+
+{% block canonical %}//{% endblock %}
+
+{% block breadcrumps %}
+    <section id="page-title" class="page-title-right">
+
+                <div class="container clearfix">
+                    <h1>{{ post.name }}</h1>
+                     {% autoescape off %}
+                         <span>{{ post.meta_description|truncatewords:9 }}</span>
+                     {% endautoescape %}
+
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">huuh.ru</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Repair single {{ post.name }}</li>
+                    </ol>
+                </div>
+
+            </section>
+{% endblock %}
+
+{% block content %}
+<section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+                <div class="fancy-title title-border-color title-left"><h2>{{ post.name }}</h2></div>
+
+                <div class="entry-image alignleft">
+                    <a href="#"><img class="alignleft" src="/static/img/1.jpg" alt="Ремонт стиральных машин в Санкт-Петербурге"></a>
+                </div>
+
+                 {{ post.content|safe }}
+                           {% autoescape off %}
+                        {{ post.body }}
+                    {% endautoescape %}
+
+
+                <div class="fancy-title title-border-color title-left"><h2>Цены</h2></div>
+                
+
+                    <div class="row grid-container has-init-isotope" data-layout="masonry" style="position: relative; height: 3272px;">
+
+
+                    <div class="col-sm-6 col-lg-4" style="position: absolute; left: 0%; top: 0px;">
+                        <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                            <div class="fbox-icon">
+                                <i class="i-rounded i-bordered icon-tint"></i>
+                            </div>
+                            <div class="fbox-content">
+                                <h3>Не сливает</h3>
+                                <div class="pricing-price"><span class="price-tenure">от</span>1100<span class="price-unit">₽</span></div>
+
+                                <ul class="iconlist">
+                                    <li><i class="icon-ok"></i> Замена сливного насоса</li>
+                                    <li><i class="icon-ok"></i> Ремонт прессостата</li>
+                                </ul>
+
+                                <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                    <i class="icon-phone3"></i><span>Заказать</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4" style="position: absolute; left: 33.3333%; top: 0px;">
+                        <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                            <div class="fbox-icon">
+                                <i class="i-rounded i-bordered icon-refresh2"></i>
+                            </div>
+                            <div class="fbox-content">
+                                <h3>Не отжимает</h3>
+                                <div class="pricing-price"><span class="price-tenure">от</span>900<span class="price-unit">₽</span></div>
+                                <ul class="iconlist">
+                                    <li><i class="icon-ok"></i> Замена угольных щеток</li>
+                                    <li><i class="icon-ok"></i> Прошивка элеткронного модуля</li>
+                                </ul>
+
+
+                                <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                    <i class="icon-phone3"></i><span>Заказать</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-lg-4" style="position: absolute; left: 66.6667%; top: 0px;">
+                        <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                            <div class="fbox-icon">
+                                <i class="i-rounded i-bordered icon-thermometer-half"></i>
+                            </div>
+                            <div class="fbox-content">
+                                <h3>Не греет воду</h3>
+                                <div class="pricing-price"><span class="price-tenure">от</span>1300<span class="price-unit">₽</span></div>
+                                <ul class="iconlist">
+                                    <li><i class="icon-ok"></i> Замена ТЭН (нагревателя воды)</li>
+                                    <li><i class="icon-ok"></i> Ремонт блока управления</li>
+                                </ul>
+
+
+                                <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                    <i class="icon-phone3"></i><span>Заказать</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- -->
+                    <div class="col-sm-6 col-lg-4" style="position: absolute; left: 0%; top: 400px;">
+                        <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                            <div class="fbox-icon">
+                                <i class="i-rounded i-bordered icon-off"></i>
+                            </div>
+                            <div class="fbox-content">
+                                <h3>Не включается</h3>
+                                <div class="pricing-price"><span class="price-tenure">от</span>1200<span class="price-unit">₽</span></div>
+                                <ul class="iconlist">
+                                    <li><i class="icon-ok"></i> Прошивка платы управления</li>
+                                    <li><i class="icon-ok"></i> Замена сетевого фильтра</li>
+                                </ul>
+
+
+                                <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                    <i class="icon-phone3"></i><span>Заказать</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- --> <!-- -->
+                    <div class="col-sm-6 col-lg-4" style="position: absolute; left: 33.3333%; top: 424px;">
+                        <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                            <div class="fbox-icon">
+                                <i class="i-rounded i-bordered icon-random1"></i>
+                            </div>
+                            <div class="fbox-content">
+                                <h3>Прыгает</h3>
+                                <div class="pricing-price"><span class="price-tenure">от</span>1200<span class="price-unit">₽</span></div>
+                                <ul class="iconlist">
+                                    <li><i class="icon-ok"></i> Замена амортизаторов</li>
+                                    <li><i class="icon-ok"></i> Замена подшипников</li>
+                                </ul>
+
+
+                                <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                    <i class="icon-phone3"></i><span>Заказать</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- --><!-- -->
+                    <div class="col-sm-6 col-lg-4" style="position: absolute; left: 66.6667%; top: 424px;">
+                        <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                            <div class="fbox-icon">
+                                <i class="i-rounded i-bordered icon-volume-up1"></i>
+                            </div>
+                            <div class="fbox-content">
+                                <h3>Шумит</h3>
+                                <div class="pricing-price"><span class="price-tenure">от</span>1200<span class="price-unit">₽</span></div>
+                                <ul class="iconlist">
+                                    <li><i class="icon-ok"></i> Замена подшипников</li>
+                                    <li><i class="icon-ok"></i> Удаление инородного предмета</li>
+                                </ul>
+
+
+                                <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                    <i class="icon-phone3"></i><span>Заказать</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 0%; top: 800px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-beaker"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Не набирает воду</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1500<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Устранение засора</li>
+                                <li><i class="icon-ok"></i> Замена КЭН или прессостата</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 33.3333%; top: 824px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-unlock1"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Не открывается</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1200<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Замена УБЛ (устройство блокировки люка)</li>
+                                <li><i class="icon-ok"></i> Ремонт проводки</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 66.6667%; top: 848px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-list-ul1"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Мигают индикаторы</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1200<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Ремонт блока управления</li>
+                                <li><i class="icon-ok"></i> Сброс прошивки</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 0%; top: 1200px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-bolt2"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Бьет током</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1200<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Ремонт проводки</li>
+                                <li><i class="icon-ok"></i> Ремонт модуля управления</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 33.3333%; top: 1248px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-angry"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Оставляет пятна</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1100<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Прочистка бака</li>
+                                <li><i class="icon-ok"></i> Проверка и устранение протечки</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 66.6667%; top: 1248px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-exclamation"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Зависает</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1200<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Прошивка электронной платы</li>
+                                <li><i class="icon-ok"></i> Ремонт электроники</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 0%; top: 1600px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-warning-sign"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Много пены</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>900<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Устранение засоров</li>
+                                <li><i class="icon-ok"></i> Ремонт или замена манжеты</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 66.6667%; top: 1648px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-resize-full"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Набирает и сливает воду</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1200<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Замена КЭН (клапана подачи воды)</li>
+                                <li><i class="icon-ok"></i> Ремонт прессостата</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 33.3333%; top: 1672px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-cog1"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Не крутит</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>900<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Замена щеток</li>
+                                <li><i class="icon-ok"></i> Ремонт двигателя</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 0%; top: 2000px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-medical-i-information-us"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Не полоскает</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1200<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Замена КЭН (клапана подачи воды)</li>
+                                <li><i class="icon-ok"></i> Устранение засора</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 33.3333%; top: 2072px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-viruses"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Не смывает порошок</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1500<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Ремонт КЭН (клапана подачи воды)</li>
+                                <li><i class="icon-ok"></i> Ремонт блока управления</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 66.6667%; top: 2072px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-rus"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Не набирает обороты</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1100<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Замена угольных щеток</li>
+                                <li><i class="icon-ok"></i> Ремонт датчика оборотов</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 0%; top: 2424px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-lock3"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Не закрывается</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>900<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Замена УБЛ (устройство блокировки люка)</li>
+                                <li><i class="icon-ok"></i> Прошивка электронного модуля</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 66.6667%; top: 2472px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-surprise"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Показывает ошибку</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1000<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Ремонт блока управления</li>
+                                <li><i class="icon-ok"></i> Сброс ошибок</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 33.3333%; top: 2496px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-stream"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Скрипит</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>1400<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Замена амортизаторов</li>
+                                <li><i class="icon-ok"></i> Замена подшипников</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- --><!-- -->
+                <div class="col-sm-6 col-lg-4" style="position: absolute; left: 0%; top: 2872px;">
+                    <div class="feature-box fbox-center fbox-bg fbox-light fbox-effect">
+                        <div class="fbox-icon">
+                            <i class="i-rounded i-bordered icon-swimming-pool"></i>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Течет</h3>
+                            <div class="pricing-price"><span class="price-tenure">от</span>800<span class="price-unit">₽</span></div>
+                            <ul class="iconlist">
+                                <li><i class="icon-ok"></i> Устранение протечки</li>
+                                <li><i class="icon-ok"></i> Замена патрубков</li>
+                            </ul>
+
+
+                            <button class="button button-rounded button-reveal button-large button-border text-right" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                <i class="icon-phone3"></i><span>Заказать</span></button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- -->
+
+
+                </div>
+
+                
+
+                <div class="divider"><i class="icon-circle"></i></div>
+                <div class="promo promo-border text-center p-4 p-md-5 mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <h3>Звоните сейчас <span class="text-danger">+7(921)938-33-27</span> или пишите на Email <span class="text-danger">support@huuh.ru</span></h3>
+                                <span>Воспользуйтесь формой обратной связи и мы Вам перезвоним.</span>
+                            </div>
+                            <div class="col-12 mt-4">
+ <button class="btn btn-lg btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                   <span>Заказать звонок</span></button>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+
+{#                {% include 'model_slide.html' %}#}
+
+                <div class="divider"><i class="icon-circle"></i></div>
+                <div class="fancy-title title-border-color title-left"><h3>Стоимость работ</h3></div>
+<div class="table-responsive">
+
+
+
+                <table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Тип работ</th>
+        <th>Стоимость (только работа)</th>
+        <th>Длительность</th>
+        <th>Гарантия</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td>
+            Выезд мастера
+        </td>
+        <td>
+            бесплатно**
+        </td>
+        <td>
+            в течение 24 часов
+        </td>
+        <td>
+            -
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Диагностика
+        </td>
+        <td>
+            бесплатно**
+        </td>
+        <td>
+            10-40 минут
+        </td>
+        <td>
+            -
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <strong>Мелкий ремонт</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена кнопки
+        </td>
+        <td>
+            от 1100 руб.
+        </td>
+        <td>
+            30-50 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена ручки люка
+        </td>
+        <td>
+            от 1400 руб.
+        </td>
+        <td>
+            30-40 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена петли дверцы
+        </td>
+        <td>
+            от 1300 руб.
+        </td>
+        <td>
+            20-30 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена стекла люка
+        </td>
+        <td>
+            от 1400 руб.
+        </td>
+        <td>
+            30-50 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена люка
+        </td>
+        <td>
+            от 1300 руб.
+        </td>
+        <td>
+            20-30 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Открытие люка без ремонта
+        </td>
+        <td>
+            от 1100 руб.
+        </td>
+        <td>
+            20-30 минут
+        </td>
+        <td>
+            -
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена сетевого фильтра (ФПС, пусковой конденсатор)
+        </td>
+        <td>
+            от 1500 руб.
+        </td>
+        <td>
+            30-50 минут
+        </td>
+        <td>
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена сливного шланга
+        </td>
+        <td>
+            от 1300 руб.
+        </td>
+        <td>
+            20-40 минут
+        </td>
+        <td>
+            от 1 до 2 лет
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена заливного шланга
+        </td>
+        <td>
+            от 950 руб.
+        </td>
+        <td>
+            10-20 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена сливного фильтра
+        </td>
+        <td>
+            от 1400 руб.
+        </td>
+        <td>
+            20-50 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена дозатора моющих средств
+        </td>
+        <td>
+            от 950 руб.
+        </td>
+        <td>
+            10-20 минут
+        </td>
+        <td>
+            2 года
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Чистка сливного фильтра
+        </td>
+        <td>
+            от 1100 руб.
+        </td>
+        <td>
+            15-30 минут
+        </td>
+        <td>
+            -
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Чистка заливного фильтра
+        </td>
+        <td>
+            от 1000 руб.
+        </td>
+        <td>
+            15-30 минут
+        </td>
+        <td>
+            -
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена приводного ремня
+        </td>
+        <td>
+            от 950 руб.
+        </td>
+        <td>
+            20-50 минут
+        </td>
+        <td>
+            9 месяцев
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Снятие транспортировочных болтов
+        </td>
+        <td>
+            от 1200 руб.
+        </td>
+        <td>
+            20 минут
+        </td>
+        <td>
+            -
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <p>
+                <strong>Средний ремонт</strong>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Замена ТЭНа
+        </td>
+        <td>
+            от 1500 руб.
+        </td>
+        <td>
+            30-60 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена сливного насоса
+        </td>
+        <td>
+            от 1700 руб.
+        </td>
+        <td>
+            30-70 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена манжеты люка
+        </td>
+        <td>
+            от 2000 руб.
+        </td>
+        <td>
+            40-90 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Поиск и устранение засора в сливном тракте
+        </td>
+        <td>
+            от 1200 руб.
+        </td>
+        <td>
+            20-70 минут
+        </td>
+        <td>
+            -
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена УБЛ (блокировки люка)
+        </td>
+        <td>
+            от 1400 руб.
+        </td>
+        <td>
+            30-60 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+           Замена щёток двигателя
+        </td>
+        <td>
+            от 1500 руб.
+        </td>
+        <td>
+            30-70 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Ремонт или замена мотора
+        </td>
+        <td>
+            от 2100 руб.
+        </td>
+        <td>
+            40-80 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена амортизаторов
+        </td>
+        <td>
+            от 2300 руб.
+        </td>
+        <td>
+            40-90 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена пружин
+        </td>
+        <td>
+            от 2000 руб.
+        </td>
+        <td>
+            30-70 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена прессостата (датчика уровня)
+        </td>
+        <td>
+            от 1700 руб.
+        </td>
+        <td>
+            40-60 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена заливного клапана (КЭНа)
+        </td>
+        <td>
+            от 1600 руб.
+        </td>
+        <td>
+            30-60 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Вынуть посторонний предмет
+        </td>
+        <td>
+            от 1400 руб.
+        </td>
+        <td>
+            30-70 минут
+        </td>
+        <td>
+            -
+        </td>
+    </tr>
+    <tr>
+        <td>
+           Замена блока управления или индикации
+        </td>
+        <td>
+            от 2000 руб.
+        </td>
+        <td>
+            30-80 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Ремонт платы управления или индикации
+        </td>
+        <td>
+            от 2500 руб.
+        </td>
+        <td>
+            40 -90 минут на месте или 2-3 дня <br>
+            (вывозится в мастерскую)
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена селектора программ
+        </td>
+        <td>
+            от 2100 руб.
+        </td>
+        <td>
+            30-70 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Ремонт или замена аквастопа
+        </td>
+        <td>
+            от 2100 руб.
+        </td>
+        <td>
+            30-90 мин
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Ремонт или замена патрубка
+        </td>
+        <td>
+            от 1600 руб.
+        </td>
+        <td>
+            30-70 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена шкива барабана
+        </td>
+        <td>
+            от 1700 руб.
+        </td>
+        <td>
+            30-50 минут
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена датчика температуры или термостата
+        </td>
+        <td>
+            от 1400 руб.
+        </td>
+        <td>
+            30-60 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена ТЭНа сушки
+        </td>
+        <td>
+            от 1700 руб.
+        </td>
+        <td>
+            40-80 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена мотора вентилятора сушки
+        </td>
+        <td>
+            от 1900 руб.
+        </td>
+        <td>
+            40-80 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена жгута электропроводки
+        </td>
+        <td>
+            от 1600 руб.
+        </td>
+        <td>
+            40-80 минут
+        </td>
+        <td>
+            2 года
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена циркуляционного насоса
+        </td>
+        <td>
+            от 2100 руб.
+        </td>
+        <td>
+            40-70 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена верхнего противовеса
+        </td>
+        <td>
+            от 1900 руб.
+        </td>
+        <td>
+            30-60 минут
+        </td>
+        <td>
+            2 года
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена шторок барабана <br>
+            (для машин с вертикальной загрузкой)
+        </td>
+        <td>
+            от 2000 руб.
+        </td>
+        <td>
+            40-70 минут
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <p>
+                <strong>Сложный ремонт</strong>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена подшипника
+        </td>
+        <td>
+            от 3500 руб.
+        </td>
+        <td>
+            1-4 часа
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена крестовины
+        </td>
+        <td>
+            от 3000 руб.
+        </td>
+        <td>
+            1-3 часа
+        </td>
+        <td>
+            2 года
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена бака или барабана
+        </td>
+        <td>
+            от 3700 руб.
+        </td>
+        <td>
+            1-3 часа
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена опоры бака
+        </td>
+        <td>
+            от 3500 руб.
+        </td>
+        <td>
+            1-2 часа
+        </td>
+        <td>
+            1 год
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена нижнего противовеса
+        </td>
+        <td>
+            от 3700 руб.
+        </td>
+        <td>
+            1-2 часа
+        </td>
+        <td>
+            2 года
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Замена шторок барабана с разбором бака <br>
+            (для машин с вертикальной загрузкой)
+        </td>
+        <td>
+            от 3000 руб.
+        </td>
+        <td>
+            1-3 часа
+        </td>
+        <td>
+            6 мес
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <strong>Скидки </strong>(только на работу, на запчасти и комплектующие не распространяются)
+        </td>
+    </tr>
+    <tr>
+        <td>
+           Пенсионерам
+        </td>
+        <td colspan="3">
+            <strong>10%</strong> <br>
+            нужно предъявить пенсионное удостоверение или паспорт
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Малообеспеченным гражданам
+        </td>
+        <td colspan="3">
+            <strong>5%</strong> <br>
+            нужно показать социальную карту москвича
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</div>
+                <div class="fancy-title title-border-color title-left"><h2>Наши преимущества</h2></div>
+                <div class="promo promo-light p-4 p-md-5 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg">
+                            <h3>Try Premium Free for <span>30 Days</span> and you'll never regret it!</h3><span>Starts at just <em>$9.99/month</em> afterwards. No Ads, No Gimmicks and No SPAM. Just Real Content.</span>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, suscipit, quas velit nam quos quo ad veritatis placeat eos vitae culpa odit excepturi error maxime quidem perferendis unde iste ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, quidem, quis, quas consequuntur officiis nemo vero neque numquam architecto voluptas natus soluta necessitatibus quos illum omnis debitis laborum. Voluptatum, porro, dolore, totam amet sit sunt ipsa quia deserunt nesciunt perspiciatis voluptate animi suscipit vitae quam cum molestiae doloribus libero quaerat.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="fancy-title title-border-color title-left"><h2>Основные неисправности</h2></div>
+
+<div class="table-responsive">
+
+
+                <table class="table table-bordered table-hover">
+    <tbody>
+    <tr>
+        <td>
+ <strong>Неисправность</strong>
+        </td>
+        <td>
+ <strong>Признаки неисправности</strong>
+        </td>
+        <td>
+ <strong>Стоимость ремонта*</strong><br>
+ <strong>(только работа)</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+ <strong>Сливной насос</strong>
+        </td>
+        <td>
+            <p>
+                 Стиральная машина Аристон не сливает воду по окончанию цикла стирки, полоскание не начинается.
+            </p>
+            <p>
+                 На моделях, имеющих электронный экран может загораться ошибка F05.
+            </p>
+        </td>
+        <td>
+ <strong>от 1700 руб.</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+ <strong>Программатор или электронный модуль управления</strong>
+        </td>
+        <td>
+            <p>
+                 Машинка не включается, не крутит барабан или сбиваются программы во время стирки.
+            </p>
+            <p>
+                 Модели с дисплеем могут показывать ошибки  F12, F18, реже F01 или F08.
+            </p>
+        </td>
+        <td>
+ <strong><strong>Ремонт - от 2100 руб.</strong>
+            <p>
+ <strong>Замена - от 2600 руб.</strong>
+            </p>
+ </strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+ <strong>ТЭН (нагревательный элемент)</strong>
+        </td>
+        <td>
+            <p>
+                 Наиболее часто машина Аристон:
+            </p>
+            <ul>
+                <li>не греет воду;</li>
+                <li>выбивает автомат или УЗО сразу при включении или через 10-15 минут после начала стирки.</li>
+            </ul>
+            <p>
+                 В редких случая СМА перегревает или кипятит воду.
+            </p>
+            <p>
+                 Модели с дисплеем могут высвечивать код F08 или F07 на экране при неисправном ТЕНе.
+            </p>
+        </td>
+        <td>
+ <strong>от 1500 руб.</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>
+ <strong>Щетки электродвигателя</strong><br>
+                 (в моделях с коллекторным двигателем)
+            </p>
+        </td>
+        <td>
+            <p>
+                 При истирании щеток мотора СМ Ariston:
+            </p>
+            <ul>
+                <li>плохо крутит или вообще не вращает барабан;</li>
+                <li>не набирает обороты на отжиме.</li>
+            </ul>
+            <p>
+            </p>
+            <p>
+                 В некоторых случаях изношенные щетки могут искрить.
+            </p>
+        </td>
+        <td>
+ <strong>от 1500 руб.</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+ <strong>Подшипник бака</strong>
+        </td>
+        <td>
+            <p>
+                 Если стиральная машина Аристон сильно шумит на отжиме, это первый звоночек, что подшипник нужно менять. При дальнейшем использовании ситуация усугубится:
+            </p>
+            <ul>
+                <li>барабан будет плохо вращаться сначала на отжиме, а потом и на стирке;</li>
+                <li>появится более громкие шумы, возможно, скрежет;</li>
+                <li>при полном разрушении подшипника барабан перестанет крутиться: его заклинит.</li>
+            </ul>
+            <p>
+                 Кроме того, из-за потери герметичности сальника подшипника стиральная машина может подтекать.
+            </p>
+            <p>
+                 Модели с дисплеем могут выдавать ошибку F02.
+            </p>
+        </td>
+        <td>
+ <strong>от 3500 руб.</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+ <strong>Ремень привода вала барабана</strong>
+        </td>
+        <td>
+             Машинка вроде бы работает: набирает, как бы стирает, сливает воду, но барабан при этом не крутится.
+        </td>
+        <td>
+ <strong>от 950 руб.</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+ <strong>Заливной клапан</strong>
+        </td>
+        <td>
+            <p>
+                 СМА Ariston плохо заливает или совсем не набирает воду. Более редко, встречается ситуация, когда вода набирается сама, даже когда машина выключена.
+            </p>
+            <p>
+                 На экране возможно появление ошибки H20.
+            </p>
+        </td>
+        <td>
+ <strong>от 1600 руб.</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+ <strong>УБЛ (устройство блокировки люка)</strong>
+        </td>
+        <td>
+            <p>
+                 Чаще всего, при выходе из строя УБЛ дверца машинки не блокируется, поэтому агрегат не начинает цикл стирки. Редко бывает обратная ситуация: после завершения программы невозможно открыть дверь.
+            </p>
+            <p>
+                 Аристоны с электронным дисплеем при данной поломке обычно пишут коды ошибок DOOR, F17 или F06.
+            </p>
+        </td>
+        <td>
+ <strong>от 1400 руб.</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+ <strong>Мотор</strong>
+        </td>
+        <td>
+            <p>
+                 Не вращается барабан СМ, может пахнуть горелым и выбивать пробки после запуска программы.
+            </p>
+            <p>
+                 На дисплее, при его наличии, как правило, загораются коды F01 или F02.
+            </p>
+        </td>
+        <td>
+ <strong>от 2100 руб.</strong>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+                
+
+							</div>
+
+                <div id="comments" class="clearfix">
+                    
+
+
+                            <div class="line"></div>
+
+                            <!-- Post Author Info
+                            ============================================= -->
+                            <div class="card">
+                                <div class="card-header"><strong>Опубликовано {{ post.author }}</strong></div>
+                                <div class="card-body">
+                                    <div class="author-image">
+                                        <img src="/static/images/author/1.jpg" alt="Image" class="rounded-circle">
+                                    </div>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eveniet, eligendi et nobis neque minus mollitia sit repudiandae ad repellendus recusandae blanditiis praesentium
+                                    vitae ab sint earum voluptate velit beatae alias fugit accusantium laboriosam nisi reiciendis deleniti tenetur molestiae maxime id quaerat consequatur fugiat aliquam laborum nam
+                                    aliquid. Consectetur, perferendis?
+                                </div>
+                            </div><!-- Post Single - Author End -->
+
+                            <div class="line"></div>
+
+                            <h4>Похожие новости</h4>
+
+                            <div class="related-posts row posts-md col-mb-30">
+
+
+                                {% for rel in rel_posts %}
+
+                                    <div class="entry col-12 col-md-6">
+                                        <div class="grid-inner row align-items-center gutter-20">
+                                            <div class="col-4">
+                                                <div class="entry-image">
+                                                    <a href="/blog/{{ rel.slug }}"><img src="{{ rel.image.url }}" alt="{{ rel.title }}"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="entry-title title-xs">
+                                                    <h3><a href="/blog/{{ rel.slug }}">{{ rel.title }}</a></h3>
+                                                </div>
+                                                <div class="entry-meta">
+                                                    <ul>
+                                                        <li><i class="icon-calendar3"></i> {{ rel.publish|date:"d-m-Y" }}</li>
+                                                        <li><a href="#"><i class="icon-comments"></i> {{ rel.comments.count }}</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+
+
+                            </div>
+
+                            <div id="comments" class="clearfix">
+{% if post.comments.count != 0 %}
+
+
+                                <h3 id="comments-title"><span>{{ post.comments.count }}</span> Вопроса</h3>
+{% endif %}
+                                <!-- Comments List
+                                ============================================= -->
+                                <ol class="commentlist clearfix">
+                                    {% for comment in comments %}
+                                        <li class="comment even thread-even">
+
+                                            <div id="comment-1" class="comment-wrap clearfix">
+
+                                                <div class="comment-meta">
+
+                                                    <div class="comment-author vcard">
+
+                                                        <span class="comment-avatar clearfix">
+                                                        <img alt="Image" src="/static/images/ava.png" class="avatar avatar-60 photo avatar-default"></span>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="comment-content clearfix">
+
+                                                    <div class="comment-author">{{ comment.name }}<span>
+                                                    <a href="#" title="Permalink to this comment"> {{ comment.created }}</a>
+                                                </span></div>
+
+                                                    {{ comment.body|linebreaks }}
+
+                                                    <a class="comment-reply-link" href="#"><i class="icon-reply"></i></a>
+
+                                                </div>
+
+                                                <div class="clear"></div>
+
+                                            </div>
+
+                                            {% if comment.answer %}
+                                                <ul class="children">
+
+                                                    <li class="comment byuser comment-author-_smcl_admin odd alt depth-2" id="li-comment-3">
+
+                                                        <div id="comment-3" class="comment-wrap clearfix">
+
+                                                            <div class="comment-meta">
+
+                                                                <div class="comment-author vcard">
+
+                                                                <span class="comment-avatar clearfix">
+                                                                <img alt="Image"
+                                                                     src="https://1.gravatar.com/avatar/30110f1f3a4238c619bcceb10f4c4484?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G"
+                                                                     class="avatar avatar-40 photo" height="40" width="40"></span>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="comment-content clearfix">
+
+                                                                <div class="comment-author">Администратор сайта<span>{{ comment.updated }}</span>
+                                                                </div>
+                                                                {{ comment.answer|linebreaks }}
+
+                                                                <a class="comment-reply-link" href="#"><i class="icon-reply"></i></a>
+
+                                                            </div>
+
+                                                            <div class="clear"></div>
+
+                                                        </div>
+
+                                                    </li>
+
+                                                </ul>
+                                            {% endif %}
+
+                                        </li>
+
+
+
+
+                                    {% empty %}
+                                        <h3>Пока по ремонту <span>с этой страницы</span> вопросы не задавали.</h3>
+                                    {% endfor %}
+
+
+                                </ol><!-- .commentlist end -->
+
+                                <div class="clear"></div>
+
+                                <!-- Comment Form
+                                ============================================= -->
+                                <div id="respond">
+
+                                    {% if new_comment %}
+                                        <h2>Ваш <span>вопрос отправлен.</span></h2>
+
+
+                                    {% else %}
+                                        <h2>Задать <span>вопрос</span></h2>
+                                        <form class="row" action="." method="post" id="commentform">
+
+
+                                            <div class="col-md-6 form-group">
+                                                <label for="author">Name</label>
+                                                {{ comment_form.name }}
+                                            </div>
+
+                                            <div class="col-md-6 form-group">
+                                                <label for="email">Email</label>
+                                                {{ comment_form.email }}
+                                            </div>
+                                            <div class="col-12 form-group">
+                                                <label for="comment">Comment</label>
+                                                {{ comment_form.body }}
+                                            </div>
+
+                                            {% csrf_token %}
+
+
+                                            <div class="col-12 form-group">
+                                                <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d m-0">Задать вопрос</button>
+                                            </div>
+
+
+                                        </form>
+
+                                    {% endif %}
+
+
+                                </div><!-- #respond end -->
+
+                            </div>
+
+                    <div class="clear"></div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+

@@ -1,6 +1,30 @@
 
 
+<div id="top-bar">
+			<div class="container">
 
+				<div class="row justify-content-between align-items-center">
+					<div class="col-12 col-md-auto">
+						<p class="mb-0 py-2 text-center text-md-left"><strong>Телефон :</strong> <a href="tel: +78129383327">+7 (812) 938-33-27</a> | <strong>Email:</strong> info@huuh.ru</p>
+					</div>
+
+					<div class="col-12 col-md-auto">
+
+						<!-- Top Links
+						============================================= -->
+						<div class="top-links">
+
+							<ul class="top-links-container">
+								<li class="top-links-item"> <strong>Ежедневно </strong> с 10:00 до 21:00</li>
+
+							</ul>
+						</div><!-- .top-links end -->
+
+					</div>
+				</div>
+
+			</div>
+		</div><!-- #top-bar end -->
 <header id="header" class="full-header">
 			<div id="header-wrap" class="">
 				<div class="container">
@@ -19,12 +43,16 @@
 							============================================= -->
 
 
-
+<!--
 
 
 							<div id="top-search" class="header-misc-icon">
 								<a href="/" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
-							</div><!-- #top-search end -->
+							</div>
+							-->
+							<!-- #top-search end -->
+
+
 {#                            <a href="#/" class="button button-3d button-mini button-rounded button-green">#}
 {#                                <i class="icon-line-phone-call"></i>#}
 {#                                Заказать звонок#}
@@ -88,7 +116,7 @@
 
 							<ul class="menu-container" style="">
 								<li class="menu-item sub-menu">
-									<a class="menu-link" href="/service/rem-stir/" style="padding-top: 39px; padding-bottom: 39px;"><div>Home<i class="icon-angle-down"></i></div></a>
+									<a class="menu-link" href="/service/rem-stir/" style="padding-top: 39px; padding-bottom: 39px;"><div>Главная<i class="icon-angle-down"></i></div></a>
 									<ul class="sub-menu-container" style="">
 										<li class="menu-item" style="">
 											<a class="menu-link" href="##section-niche"><div>Niche Demos</div></a>
@@ -1494,25 +1522,35 @@
 										<div class="container" style="">
 											<div class="row">
 {#   до 10 ссылок#}
+                                            <ul class="sub-menu-container mega-menu-column col" style="">
+                                           <li class="menu-item" style="">
+														<a class="menu-link" href="#"><div>
+                                                            Закоменчен блок
+                                                            <i class="icon-calendar3"></i>
+
+                                                        </div></a>
+													</li>
+                                        </ul>
+
 
                                                 {% for m_item in blog_objects %}
     {{ m_item.title }}
                                                 {% endfor %}
 
 
-                                                {% for m_item in menu_items %}
-                                        <ul class="sub-menu-container mega-menu-column col" style="">
-                                        {% for m_ite in m_item %}
-                                           <li class="menu-item" style="">
-														<a class="menu-link" href="#/{{ m_ite.slug }}/"><div>
-                                                            {% autoescape off %}{{ m_ite.icon }}{% endautoescape %}
+{#                                                {% for m_item in menu_items %}#}
+{#                                        <ul class="sub-menu-container mega-menu-column col" style="">#}
+{#                                        {% for m_ite in m_item %}#}
+{#                                           <li class="menu-item" style="">#}
+{#														<a class="menu-link" href="#/{{ m_ite.slug }}/"><div>#}
+{#                                                            {% autoescape off %}{{ m_ite.icon }}{% endautoescape %}#}
 {#                                                            <i class="icon-calendar3"></i>#}
-                                                            {{ m_ite.name }}
-                                                        </div></a>
-													</li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endfor %}
+{#                                                            {{ m_ite.name }}#}
+{#                                                        </div></a>#}
+{#													</li>#}
+{#                                            {% endfor %}#}
+{#                                        </ul>#}
+{#                                    {% endfor %}#}
 
 
 
@@ -1664,11 +1702,11 @@
 							</ul>
 
 						</nav><!-- #primary-menu end -->
-
+<!--
 						<form class="top-search-form" action="search#" method="get" style="width: 1207px;">
 							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
 						</form>
-
+-->
 					</div>
 				</div>
 			</div>

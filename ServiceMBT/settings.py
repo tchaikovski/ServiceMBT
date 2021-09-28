@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'service.apps.ServiceConfig',
     'blog.apps.BlogConfig',
     'SinglePages.apps.SinglepagesConfig',
+    'SM',
     'sitemenu.apps.SiteMenuConfig',
     # 'django.contrib.sites',
     'django.contrib.sitemaps',

@@ -3,13 +3,14 @@
 {% load static %}
 
 {% block title %}
-    {{ singlepage.name }}
+    {{ post.name }}
 {% endblock %}
+{% block canonical %}/{{ post.slug }}/{% endblock %}
 {% block breadcrumps %}
     <section id="page-title" class="page-title-right">
 
                 <div class="container clearfix">
-                    <h1>{{ singlepage.name }}</h1>
+                    <h1>{{ post.name }}</h1>
                      {% autoescape off %}
                          <span>{{ singlepage.content|truncatewords:6 }}</span>
                      {% endautoescape %}

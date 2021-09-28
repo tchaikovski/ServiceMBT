@@ -19,6 +19,7 @@ urlpatterns = [
                   path('service/', include('service.urls', namespace='uslugi')),
                   path('', TemplateView.as_view(template_name='base.html'), name='index'),
                   path('', include('SinglePages.urls')),
+                  path('remont-stiralnih-mashin/', include('SM.urls', namespace='stir')),
                   path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
                   # path('captcha/', include('captcha.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

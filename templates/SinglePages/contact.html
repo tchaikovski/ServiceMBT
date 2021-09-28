@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% load common_tags %}
+{% load static %}
+
+
+{% block title %}11
+    {{ post.meta_title }}
+{% endblock %}
+{% block description %}{{ post.meta_description }}{% endblock %}
+{% block canonical %}//{% endblock %}
+{% block breadcrumps %}
+    <section id="page-title" class="page-title-right">
+
+                <div class="container clearfix">
+                    <h1>{{ p.name }}</h1>
+                     {% autoescape off %}
+                         <span>{{ post.content|truncatewords:6 }}</span>
+                     {% endautoescape %}
+
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">huuh.ru</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ post.name }}</li>
+                    </ol>
+                </div>
+
+            </section>
+{% endblock %}
+
+{% block content %}
+
+
+
+    <!-- <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+<div class="fancy-title title-double-border">
+						<h1>Double Border Title</h1>
+					</div>
+
+
+                        {{ singlepage.content|safe }}
+                           {% autoescape off %}
+                        {{ singlepage.body }}
+                    {% endautoescape %}
+            <div class="row col-mb-50">
+                </div>
+            </div>
+        </div>
+    </section>
+ -->
+
+
+
+<section>
+
+ <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae12bea68e5164dc4fc8905616352e55e544d7f35e7698dc46dc7b11371304608&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+
+
+</section>
+
+
+
+
+
+    <div id="page-menu" class="">
+			<div id="page-menu-wrap" style="">
+				<div class="container">
+					<div class="page-menu-row">
+
+						<div class="page-menu-title">Контакты <span> сервисного</span> центра</div>
+
+						
+
+						<div id="page-menu-trigger"><i class="icon-reorder"></i></div>
+
+					</div>
+				</div>
+			</div><div class="page-menu-wrap-clone" style="height: 48px;"></div>
+		</div>
+
+
+<section id="content">
+				<div class="container">
+
+					<div class="row gutter-40 col-mb-80">
+
+
+                            <div class="line"></div>
+
+
+						<!-- Postcontent
+						============================================= -->
+						<div class="postcontent col-lg-9">
+
+							 <div id="comments" class="clearfix">
+                    
+
+
+                            <!-- Post Author Info
+                            ============================================= -->
+                            <div class="card">
+                                <div class="card-header"><strong>Опубликовано {{ post.author }}</strong></div>
+                                <div class="card-body">
+                                    <div class="author-image">
+                                        <img src="/static/images/author/1.jpg" alt="Image" class="rounded-circle">
+                                    </div>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eveniet, eligendi et nobis neque minus mollitia sit repudiandae ad repellendus recusandae blanditiis praesentium
+                                    vitae ab sint earum voluptate velit beatae alias fugit accusantium laboriosam nisi reiciendis deleniti tenetur molestiae maxime id quaerat consequatur fugiat aliquam laborum nam
+                                    aliquid. Consectetur, perferendis?
+                                </div>
+                            </div><!-- Post Single - Author End -->
+
+                            
+                            <div class="line"></div>
+
+                            
+
+                            
+
+                                <div class="clear"></div>
+
+                                <!-- Comment Form
+                                ============================================= -->
+                                <div id="respond">
+
+                                    {% if new_comment %}
+                                        <h2>Ваш <span>вопрос отправлен.</span></h2>
+
+
+                                    {% else %}
+                                        <h2>Задать <span>вопрос</span></h2>
+                                        <form class="row" action="." method="post" id="commentform">
+
+
+                                            <div class="col-md-6 form-group">
+                                                <label for="author">Name</label>
+                                                {{ comment_form.name }}
+                                            </div>
+
+                                            <div class="col-md-6 form-group">
+                                                <label for="email">Email</label>
+                                                {{ comment_form.email }}
+                                            </div>
+                                            <div class="col-12 form-group">
+                                                <label for="comment">Comment</label>
+                                                {{ comment_form.body }}
+                                            </div>
+
+                                            {% csrf_token %}
+
+
+                                            <div class="col-12 form-group">
+                                                <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d m-0">Задать вопрос</button>
+                                            </div>
+
+
+                                        </form>
+
+                                    {% endif %}
+
+
+                                </div><!-- #respond end -->
+
+                            </div>
+
+                    <div class="clear"></div>
+
+                    
+                </div>
+
+
+
+						<!-- Sidebar
+						============================================= -->
+						<div class="sidebar col-lg-3">
+
+                           <div itemscope itemtype="http://schema.org/Organization">
+  <span itemprop="name">HUUH.ru</span>
+  Контакты:
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    Адрес:
+    <span itemprop="streetAddress">Набережная Обводного канала, 135</span>
+    <span itemprop="postalCode"> 190005</span>
+    <span itemprop="addressLocality">Санкт-Петербург</span>,
+  </div>
+  <strong>Телефон:</strong><span itemprop="telephone">+7 812 938–33–27</span>,
+  <strong>Электронная почта:</strong><span itemprop="email">promo@huuh.ru</span>
+</div>
+
+							
+
+							<div class="widget border-0 pt-0">
+
+								<div class="fslider customjs testimonial twitter-scroll twitter-feed" data-username="envato" data-count="3" data-animation="slide" data-arrows="false">
+									<i class="i-plain i-small color icon-twitter mb-0" style="margin-right: 15px;"></i>
+									<div class="flexslider" style="width: auto;">
+										<div class="slider-wrap">
+											<div class="slide"></div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="widget border-0 pt-0">
+
+								<a href="#" class="social-icon si-small si-dark si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-dark si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-dark si-dribbble">
+									<i class="icon-dribbble"></i>
+									<i class="icon-dribbble"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-dark si-forrst">
+									<i class="icon-forrst"></i>
+									<i class="icon-forrst"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-dark si-pinterest">
+									<i class="icon-pinterest"></i>
+									<i class="icon-pinterest"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-dark si-gplus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+							</div>
+
+						</div><!-- .sidebar end -->
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+
+{% endblock %}

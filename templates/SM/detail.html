@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 {% block title %}
-   22 Detail title
+    Detail title
 {% endblock %}
 
 {% block description %}{% endblock %}
-{% block canonical %} {{ post.slug }}/{% endblock %}
+
 {% block breadcrumps %}
     <section id="page-title" class="page-title-right">
 
 
         <div class="container clearfix">
-            <h1> {{ post.name }} </h1>
+            <h1>{{ post.name }} </h1>
             <span>{% autoescape off %}{{ post.content|truncatewords:5 }}{% endautoescape %}</span>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">huuh.ru</a></li>
